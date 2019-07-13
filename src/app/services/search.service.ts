@@ -10,7 +10,6 @@ import { Injectable } from '@angular/core';
 })
 
 export class SearchService {
-  // gitUrl:string=`https://api.github.com/users/${sundaybrian}?access_token=`;
 
   _gitUser: User;
 
@@ -18,9 +17,9 @@ export class SearchService {
     this._gitUser = new User("", "", "", "");
   }
 
-  getUser() {
+  getUser(queryStr) {
     let promise = new Promise((resolve, reject) => {
-      this.httpClient.get<GitUser>(environment.apiUrl).toPromise().then(response => {
+      this.httpClient.get<GitUser>(`https://api.github.com/users/${queryStr}?access_token=${environment.apiKey}`).toPromise().then(response => {
         this._gitUser.location = response.location;
         this._gitUser.name = response.name;
         this._gitUser.avatar_url = response.avatar_url;

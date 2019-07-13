@@ -1,17 +1,15 @@
 <div class="container">
-  <app-search-form></app-search-form>
+  <app-search-form (onQueryString)="onQuerySearch($event)"></app-search-form>
 
-  <div class="user-card">
+  <div class="user-card" *ngIf="_user">
     <div class="card-deck">
       <div class="card">
-        <img class="card-img-top" [src]="_user.avatar_url" alt="">
+        <img class="card-img-top" [src]="_user?.avatar_url" alt="">
         <div class="card-body">
-          <h5 class="card-title">{{_user.name}}</h5>
-          <p class="card-text">{{_user.location}}
+          <h5 class="card-title">{{_user?.name}}</h5>
+          <p class="card-text">{{_user?.location}}
             <br>
-            {{_user.company}}
-            sunt reiciendis, eos laboriosam officia praesentium dolorem magnam deleniti autem, distinctio earum eum
-            magni ea quo laudantium molestias!
+            {{_user?.company}}
           </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>

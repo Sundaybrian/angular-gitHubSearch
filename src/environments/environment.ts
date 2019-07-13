@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://api.github.com/users/sundaybrian?access_token=fb7f92516f5b553b166d521bc3988700bdafc12a"
+  apiKey: "fb7f92516f5b553b166d521bc3988700bdafc12a"
 };
 
 /*

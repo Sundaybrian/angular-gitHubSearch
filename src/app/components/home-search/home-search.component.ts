@@ -17,12 +17,16 @@ export class HomeSearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchService.getUser()
-    this._user = this.searchService._gitUser
+
     console.log(this._user, "data is live");
   }
 
-  
+  onQuerySearch(queryString: string) {
+    this.searchService.getUser(queryString);
+    this._user = this.searchService._gitUser
+  }
+
+
 
 
 
