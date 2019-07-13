@@ -1,3 +1,11 @@
+.form-card {
+  margin-top: 20vh;
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .form-group.form-search {
   position: relative;
 }
@@ -12,4 +20,21 @@
   left: 8px;
   font-size: 15px;
   color: #dbd3d3;
+}
+
+.form-group input[type=text] {
+  background: transparent;
+}
+
+.form-group label:hover {
+  color: #1ebba3;
+}
+
+input[type=text]:hover,
+input[type=text]:visited {
+  border: 2px solid #1ebba3;
+}
+
+.form-control:focus {
+  box-shadow: 0;
 }
