@@ -2,3 +2,8 @@ img.card-img-top {
   max-width: 150px;
   max-height: 150px
 }
+
+.card-footer span {
+  margin: 0 4px;
+  padding: 5px 2px;
+}
