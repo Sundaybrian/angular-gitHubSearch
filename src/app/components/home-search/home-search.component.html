@@ -2,7 +2,7 @@
   <app-search-form (onQueryString)="onQuerySearch($event)"></app-search-form>
 
   <div class="row">
-    <div class="col-md-5 col-sm-12">
+    <div class="col-md-5 col-sm-12 mb-3">
 
       <div class="user-card" *ngIf="_user">
         <div class="card-deck">
@@ -15,10 +15,11 @@
               <img class="card-img-top" [src]="_user?.avatar_url" alt="">
             </div>
             <div class="card-body">
-              <!-- <ul class="list-group">
+              <p class="card-text">{{_user?.bio}}</p>
+              <ul class="list-group">
                 <li class="list-group-item"><i class="fa fa-map-marker"></i>{{_user.location}}</li>
                 <li class="list-group-item">Company:{{_user?.company}}</li>
-                <li class="list-group-item"> <button type="button" class="btn btn-primary btn-xs">
+                <!-- <li class="list-group-item"> <button type="button" class="btn btn-primary btn-xs">
                     Repos: <span class="badge badge-light">{{_user?.public_repos}}</span>
                   </button></li>
                 <li class="list-group-item"><button type="button" class="btn btn-primary btn-xs">
@@ -29,9 +30,8 @@
                   </button></li>
                 <li class="list-group-item"> <button type="button" class="btn btn-primary btn-xs">
                     Gists: <span class="badge badge-light">{{_user?.public_gists}}</span>
-                  </button></li>
-              </ul> -->
-              <p class="card-text">{{_user?.bio}}</p>
+                  </button></li> -->
+              </ul>
             </div>
             <div class="card-footer">
               <span class="badge badge-primary"> Repos:{{_user?.public_repos}}</span>
@@ -50,9 +50,10 @@
 
     <div class="col-md-7 col-sm-12">
       <div class="row">
-        <div class="col-sm-12" *ngFor="let repo of _userRepos">
-          <small>{{repo.name}}</small>
-          <p>{{repo.full_name}}</p>
+        <div class="col-sm-12 mb-2 repo-cols" *ngFor="let repo of _userRepos">
+          <small class="repo-title"><i
+              class="fa fa-github"></i>{{repo.name}}&nbsp;<span>{{repo.full_name}}</span>&nbsp;</small>
+          <p class="lead">{{repo.description}}</p>
         </div>
       </div>
     </div>

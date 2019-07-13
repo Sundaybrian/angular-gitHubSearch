@@ -5,5 +5,26 @@ img.card-img-top {
 
 .card-footer span {
   margin: 0 4px;
-  padding: 5px 2px;
+  padding: 5px 3px;
+}
+
+i.fa.fa-map-marker {
+  color: #1ebba3;
+  padding-right: 3px;
+}
+
+i.fa.fa-github {
+  padding-right: 4px;
+  color: #1ebba3;
+
+}
+
+small.repo-title {
+  margin-top: 1.4rem;
+  color: #1ebba3;
+  font-size: 1.2rem;
+}
+
+.repo-cols p {
+  color: #fff;
 }
