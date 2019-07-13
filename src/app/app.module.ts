@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeSearchComponent } from './components/home-search/home-search.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LandingComponent } from './components/landing/landing.component';
+
 
 
 
@@ -16,7 +18,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppComponent,
     HomeSearchComponent,
     SearchFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
