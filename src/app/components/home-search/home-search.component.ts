@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeSearchComponent implements OnInit {
 
   _user: User;
-  _repos: any;
+  _userRepos: any[];
   constructor(private searchService: SearchService) {
 
   }
@@ -25,7 +25,7 @@ export class HomeSearchComponent implements OnInit {
   onQuerySearch(queryString: string) {
     this.searchService.getUser(queryString);
     this._user = this.searchService._gitUser
-    // this._repos = this.searchService._repoData
+    this._userRepos = this.searchService._repoData
     // console.log(this._repos);
   }
 
