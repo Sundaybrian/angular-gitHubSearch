@@ -22,6 +22,8 @@ export class HomeSearchComponent implements OnInit {
     console.log(this._user, "data is live");
   }
 
+  
+
 
 
 }

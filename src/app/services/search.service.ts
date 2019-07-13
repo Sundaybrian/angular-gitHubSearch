@@ -8,7 +8,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class SearchService {
+  // gitUrl:string=`https://api.github.com/users/${sundaybrian}?access_token=`;
+
   _gitUser: User;
 
   constructor(private httpClient: HttpClient) {

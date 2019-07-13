@@ -1,0 +1,15 @@
+.form-group.form-search {
+  position: relative;
+}
+
+.form-group.form-search input {
+  text-indent: 30px;
+}
+
+.form-group.form-search .fa-search {
+  position: absolute;
+  top: 44px;
+  left: 8px;
+  font-size: 15px;
+  color: #dbd3d3;
+}

@@ -1,1 +1,11 @@
-<p>search-form works!</p>
+<div class="card card-body mb-4">
+  <form #searchForm='ngForm' (ngSubmit)=search(searchForm)>
+    <div class="form-group form-search">
+      <label for="searchName">Search Git User</label>
+      <i class="fa fa-search"></i>
+      <input type="text" #searchName='ngModel' name="searchName" [(ngModel)]='userQuerySearch' required
+        class="form-control mb-2" placeholder="Enter User Name to Search">
+    </div>
+    <!-- <button class="btn btn-dark btn-sm" type="submit">Search <i class="fa fa-search"></i> </button> -->
+  </form>
+</div>
