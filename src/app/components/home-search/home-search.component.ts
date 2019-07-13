@@ -1,9 +1,7 @@
 import { User } from './../../User-model/user';
-import { GitUser } from './../../models/git-user';
 import { SearchService } from './../../services/search.service';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../../environments/environment';
+
 
 
 @Component({
@@ -14,36 +12,16 @@ import { environment } from '../../../environments/environment';
 export class HomeSearchComponent implements OnInit {
 
   _user: User;
-  constructor(private httpClient: HttpClient) {
-    this._user = new User("", "", "", "");
+  constructor(private searchService: SearchService) {
+
   }
 
   ngOnInit() {
-    this.getUser()
-    console.log(this._user, "ngOnInit");
+    this.searchService.getUser()
+    this._user = this.searchService._gitUser
+    console.log(this._user, "data is live");
   }
 
-  getUser() {
-    let promise = new Promise((resolve, reject) => {
-      this.httpClient.get<GitUser>(environment.apiUrl).toPromise().then(response => {
-        this._user.location = response.location;
-        this._user.name = response.name;
-        this._user.avatar_url = response.avatar_url;
-        this._user.company = response.company;
 
-        resolve()
-      },
-        error => {
-          this._user.location = "null";
-          this._user.name = "null";
-          this._user.avatar_url = "null";
-          this._user.company = "null";
-          reject(error)
-        }
-      )
-    })
-
-    return promise;
-  }
 
 }
