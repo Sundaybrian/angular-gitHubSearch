@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
 import { User } from './../../User-model/user';
 import { SearchService } from './../../services/search.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 
@@ -13,7 +15,7 @@ export class HomeSearchComponent implements OnInit {
 
   _user: User;
   _userRepos: any[];
-  constructor(private searchService: SearchService) {
+  constructor(private searchService: SearchService, private router: Router) {
 
   }
 

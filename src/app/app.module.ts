@@ -9,6 +9,8 @@ import { HomeSearchComponent } from './components/home-search/home-search.compon
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
