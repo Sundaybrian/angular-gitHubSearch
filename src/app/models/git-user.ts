@@ -5,4 +5,8 @@ export interface GitUser {
     company: string;
     login: string;
     bio: string;
+    public_repos: number;
+    public_gists: number;
+    followers: number;
+    following: number;
 }

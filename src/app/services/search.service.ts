@@ -20,7 +20,7 @@ export class SearchService {
 
 
   constructor(private httpClient: HttpClient) {
-    this._gitUser = new User("", "", "", "", "", "");
+    this._gitUser = new User("", "", "", "", "", "", 0, 0, 0, 0);
     this._userRepo = new RepoUser("", "", "", new Date(), "");
   }
 
@@ -33,7 +33,12 @@ export class SearchService {
         this._gitUser.avatar_url = response.avatar_url;
         this._gitUser.company = response.company;
         this._gitUser.login = response.login;
-        this._gitUser.bio = response.bio
+        this._gitUser.bio = response.bio;
+        this._gitUser.public_repos = response.public_repos;
+        this._gitUser.public_gists = response.public_gists;
+        this._gitUser.followers = response.followers;
+        this._gitUser.following = response.following;
+
 
         resolve()
       },
@@ -46,7 +51,7 @@ export class SearchService {
       this.httpClient.get<any>(`https://api.github.com/users/${queryStr}/repos?access_token=${environment.apiKey}`).toPromise().then(response => {
 
         for (let i = 0; i < response.length; i++) {
-          
+
           this._newFetchedRepo = new RepoUser(response[i].name, response[i].full_name, response[i].description,
             response[i].updated_at, response[i].html_url);
           this._repoData.push(this._newFetchedRepo)

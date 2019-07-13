@@ -1,32 +1,43 @@
 <div class="container">
   <app-search-form (onQueryString)="onQuerySearch($event)"></app-search-form>
 
-  <div class="row">
 
-    <div class="user-card" *ngIf="_user">
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-header">
-            <h3>{{_user?.location}}</h3>
+
+  <h3 class="text-center">{{_user?.location}}</h3>
+  <div class="user-card" *ngIf="_user">
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <div class="titles d-flex flex-column">
+            <h3 class="card-title">{{_user.name}}</h3>
+            <small class="text-muted">{{_user.login}}</small>
           </div>
           <img class="card-img-top" [src]="_user?.avatar_url" alt="">
-          <div class="card-body">
-            <h5 class="card-title">{{_user?.name}}</h5>
-            <small class="text-muted">{{_user?.login}}</small>
-            <p class="card-text">{{_user?.bio}}
-              <br>
-              {{_user?.company}}
-            </p>
-            <a class="btn btn-primary" routerLink="/home/{{_user.name}}">See
-              Repos</a>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item"><i class="fa fa-map-marker"></i>{{_user.location}}</li>
+            <li class="list-group-item">Company:{{_user?.company}}</li>
+          </ul>
+          <p class="card-text">{{_user?.bio}}</p>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary">Left</button>
+            <button type="button" class="btn btn-secondary">Middle</button>
+            <button type="button" class="btn btn-secondary">Right</button>
+            <button type="button" class="btn btn-secondary">farRight</button>
+            <span class="label label-default">follwers</span>
           </div>
-        </div><!-- card body -->
-      </div> <!-- card deck -->
-    </div><!-- user-card -->
+
+        </div>
+      </div><!-- card body -->
+    </div> <!-- card deck -->
+  </div><!-- user-card -->
 
 
 
-  </div>
+
 
   <div class="row">
     <div class="col-md-4" *ngFor="let repo of _userRepos">
