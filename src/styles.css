@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body,
 html {
-  overflow-x: hidden;
+
   color: #505962;
-  background: url(./assets/astronomy-colors-constellation-2646380.jpg) !important;
-  background-position: center center;
+  background: url(./assets/cc-wallpaper-desktop.png) !important;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
 
 }
 
@@ -93,6 +94,7 @@ html {
 
 .caption h3 {
   font-size: 2rem;
+  color: #1ebba3;
   text-shadow: .1rem .1rem .5rem black;
   padding-bottom: 1.6rem;
 

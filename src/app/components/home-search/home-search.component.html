@@ -14,29 +14,17 @@
               </div>
               <img class="card-img-top" [src]="_user?.avatar_url" alt="">
             </div>
-            <div class="card-body">
+            <div class="card-body ">
               <p class="card-text">{{_user?.bio}}</p>
               <ul class="list-group">
                 <li class="list-group-item"><i class="fa fa-map-marker"></i>{{_user.location}}</li>
-                <li class="list-group-item">Company:{{_user?.company}}</li>
-                <!-- <li class="list-group-item"> <button type="button" class="btn btn-primary btn-xs">
-                    Repos: <span class="badge badge-light">{{_user?.public_repos}}</span>
-                  </button></li>
-                <li class="list-group-item"><button type="button" class="btn btn-primary btn-xs">
-                    Followers: <span class="badge badge-light">{{_user?.followers}}</span>
-                  </button></li>
-                <li class="list-group-item"><button type="button" class="btn btn-primary btn-xs">
-                    Following: <span class="badge badge-light">{{_user?.following}}</span>
-                  </button></li>
-                <li class="list-group-item"> <button type="button" class="btn btn-primary btn-xs">
-                    Gists: <span class="badge badge-light">{{_user?.public_gists}}</span>
-                  </button></li> -->
+                <li class="list-group-item"><i class="fa fa-building-o"></i>{{_user?.company}}</li>
               </ul>
             </div>
             <div class="card-footer">
-              <span class="badge badge-primary"> Repos:{{_user?.public_repos}}</span>
-              <span class="badge badge-secondary"> Followers:{{_user?.followers}}</span>
-              <span class="badge badge-dark"> Following:{{_user?.following}}</span>
+              <span class="badge badge-danger"> Repos:{{_user?.public_repos}}</span>
+              <span class="badge badge-warning"> Followers:{{_user?.followers}}</span>
+              <span class="badge badge-primary"> Following:{{_user?.following}}</span>
               <span class="badge badge-info"> Gists:{{_user?.public_gists}}</span>
             </div>
           </div><!-- card body -->
@@ -51,8 +39,10 @@
     <div class="col-md-7 col-sm-12">
       <div class="row">
         <div class="col-sm-12 mb-2 repo-cols" *ngFor="let repo of _userRepos">
-          <small class="repo-title"><i
-              class="fa fa-github"></i>{{repo.name}}&nbsp;<span>{{repo.full_name}}</span>&nbsp;</small>
+          <small class="repo-title">
+            <i class="fa fa-github"></i>{{repo.name}}&nbsp;|<span><a target="_blank" href="{{repo.html_url}}">
+                {{repo.full_name}}</a></span>&nbsp;</small>
+          <h5>Last Update:{{repo.updated_at | date}}</h5>
           <p class="lead">{{repo.description}}</p>
         </div>
       </div>

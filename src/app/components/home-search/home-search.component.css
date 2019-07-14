@@ -1,3 +1,21 @@
+.card-header,
+.card-footer {
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.card-footer {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.card-body,
+.list-group-item {
+  background: #444;
+  color: #fff;
+  border: 1px solid #000;
+}
+
 img.card-img-top {
   max-width: 150px;
   max-height: 150px
@@ -8,7 +26,8 @@ img.card-img-top {
   padding: 5px 3px;
 }
 
-i.fa.fa-map-marker {
+i.fa.fa-map-marker,
+i.fa.fa-building-o {
   color: #1ebba3;
   padding-right: 3px;
 }
@@ -17,6 +36,10 @@ i.fa.fa-github {
   padding-right: 4px;
   color: #1ebba3;
 
+}
+
+.badge-info {
+  background: #1ebba3;
 }
 
 small.repo-title {
