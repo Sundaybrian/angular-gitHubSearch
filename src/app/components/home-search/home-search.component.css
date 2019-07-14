@@ -1,19 +1,22 @@
 .card-header,
-.card-footer {
-  background: rgb(0, 0, 0);
+.card-footer,
+.card-body,
+.list-group {
+  background: rgb(0, 0, 0, .9) !important;
   color: #fff;
 }
+
+.list-group-item {
+  background: rgb(0, 0, 0, .7);
+}
+
+
+
 
 .card-footer {
   padding-top: 8px !important;
   padding-bottom: 8px !important;
-}
-
-.card-body,
-.list-group-item {
-  background: #444;
-  color: #fff;
-  border: 1px solid #000;
+  color: #333;
 }
 
 img.card-img-top {
@@ -38,14 +41,23 @@ i.fa.fa-github {
 
 }
 
-.badge-info {
+.badge-info,
+.badge-primary,
+.badge-danger,
+.badge-warning {
   background: #1ebba3;
+
 }
 
 small.repo-title {
   margin-top: 1.4rem;
   color: #1ebba3;
   font-size: 1.2rem;
+}
+
+.repo-title span a {
+  color: rgb(69, 245, 227);
+
 }
 
 .repo-cols p {
