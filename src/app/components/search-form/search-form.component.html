@@ -3,8 +3,12 @@
     <div class="form-group form-search">
       <label for="searchName">Search Git User</label>
       <i class="fa fa-search"></i>
-      <input type="text" #searchName='ngModel' name="searchName" [(ngModel)]='userQueryString' required
-        class="form-control mb-2" placeholder="Enter User Name to Search">
+      <input type="text" [ngClass]="{'is-invalid':searchName.errors && searchName.touched}" #searchName='ngModel'
+        name="searchName" [(ngModel)]='userQueryString' required class="form-control mb-2"
+        placeholder="Enter User Name to Search">
+      <div class="invalid-feedback" [hidden]="!searchName.errors?.required">
+        User Name Required
+      </div>
     </div>
     <!-- <button class="btn btn-dark btn-sm" type="submit">Search <i class="fa fa-search"></i> </button> -->
   </form>

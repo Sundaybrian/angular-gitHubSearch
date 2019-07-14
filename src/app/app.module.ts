@@ -9,6 +9,7 @@ import { HomeSearchComponent } from './components/home-search/home-search.compon
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { RepoHoverDirective } from './repo-hover.directive';
 
 
 
@@ -19,7 +20,8 @@ import { LandingComponent } from './components/landing/landing.component';
     HomeSearchComponent,
     SearchFormComponent,
     NotFoundComponent,
-    LandingComponent
+    LandingComponent,
+    RepoHoverDirective
   ],
   imports: [
     BrowserModule,
