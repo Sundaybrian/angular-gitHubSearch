@@ -18,11 +18,22 @@ html {
   letter-spacing: .1rem;
   background: rgba(0, 0, 0, 0.6) !important;
 
+
 }
 
 .navbar-brand i {
   font-size: 2rem;
   color: #1ebba3 !important;
+  transform: scale(1);
+  transition: .3s;
+
+}
+
+
+.navbar-brand i:hover {
+  color: rgb(28, 250, 228);
+  transform: scale(1.2);
+
 }
 
 .navbar-nav li {
