@@ -15,10 +15,12 @@
               <img class="card-img-top" [src]="_user?.avatar_url" alt="">
             </div>
             <div class="card-body ">
-              <p class="card-text" *ngIf="!_user.bio">{{_user?.bio}}</p>
+              <p class="card-text" *ngIf="_user.bio">{{_user?.bio}}</p>
               <ul class="list-group">
-                <li class="list-group-item"><i class="fa fa-map-marker"></i>{{_user.location}}</li>
-                <li class="list-group-item"><i class="fa fa-building-o"></i>{{_user?.company}}</li>
+                <li class="list-group-item" *ngIf="_user.location"><i class="fa fa-map-marker"></i>{{_user.location}}
+                </li>
+                <li class="list-group-item" *ngIf="_user.company"><i class="fa fa-building-o"></i>{{_user?.company}}
+                </li>
               </ul>
             </div>
             <div class="card-footer">
