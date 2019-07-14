@@ -8,6 +8,7 @@
 
 .list-group-item {
   background: rgb(0, 0, 0, .7);
+  letter-spacing: .1rem;
 }
 
 
@@ -35,10 +36,14 @@ i.fa.fa-building-o {
   padding-right: 3px;
 }
 
-i.fa.fa-github {
+i.fa.fa-github,
+i.fa.fa-clone {
   padding-right: 4px;
   color: #1ebba3;
+}
 
+i.fa.fa-clone {
+  color: #fb3;
 }
 
 .badge-info,
